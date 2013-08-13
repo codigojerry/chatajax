@@ -1,11 +1,7 @@
 <?php
 
-$con=mysqli_connect("localhost","root","jerson","chatajax");
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+include 'conexion.php';
+$con=conexion();
   
 $result = mysqli_query($con,"SELECT * FROM mensajes");
 
